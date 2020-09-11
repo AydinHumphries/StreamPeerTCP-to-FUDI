@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 735.0
+margin_bottom = 243.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttonConnect" type="Button" parent="Control"]
+margin_left = 207.0
+margin_top = 72.0
+margin_right = 499.0
+margin_bottom = 130.0
+text = "Connect to Host"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttonMessage" type="Button" parent="Control"]
+margin_left = 210.0
+margin_top = 141.0
+margin_right = 502.0
+margin_bottom = 199.0
+text = "Send Message"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Control/buttonConnect" to="Control" method="_on_connect"]
+[connection signal="pressed" from="Control/buttonMessage" to="Control" method="_on_message"]
