@@ -10,4 +10,4 @@ func _on_connect():
 	socket.connect_to_host("127.0.0.1", 4242)
 
 func _on_message():
-	socket.put_string(";")
+	socket.put_data("myMessage;".to_ascii())
