@@ -1,0 +1,9 @@
+#N canvas -8 -8 1366 685 12;
+#X obj 83 280 print tcp;
+#X obj 249 281 print udp;
+#X obj 83 184 netreceive 4242;
+#X msg 163 241 hello world;
+#X msg 71 115 listen 4242;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
